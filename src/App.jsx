@@ -5,9 +5,7 @@
 import "./App.css";
 import Title from "./components/Title/Title";
 import Section from "./components/Section/Section";
-import students from "./students.json";
 import List from "./components/List/List";
-import auto from "./auto.json"
 
 // const usersInfo = [
 //   {
@@ -182,49 +180,90 @@ import auto from "./auto.json"
 //   },
 // ];
 
+const users = [
+  {
+    id: 1,
+    name: "Іван",
+    age: 16,
+    city: "Київ",
+    email: "ivan@example.com",
+    isActive: true,
+    salary: 12000,
+  },
+  {
+    id: 2,
+    name: "Олена",
+    age: 22,
+    city: "Львів",
+    email: "olena@example.com",
+    isActive: false,
+    salary: 28000,
+  },
+  {
+    id: 3,
+    name: "Андрій",
+    age: 35,
+    city: "Одеса",
+    email: "andrii@example.com",
+    isActive: true,
+    salary: 55000,
+  },
+  {
+    id: 4,
+    name: "Марія",
+    age: 48,
+    city: "Харків",
+    email: "maria@example.com",
+    isActive: true,
+    salary: 73000,
+  },
+  {
+    id: 5,
+    name: "Олександр",
+    age: 61,
+    city: "Дніпро",
+    email: "olex@example.com",
+    isActive: false,
+    salary: 41000,
+  },
+  {
+    id: 6,
+    name: "Катерина",
+    age: 27,
+    city: "Вінниця",
+    email: "katya@example.com",
+    isActive: true,
+    salary: 36000,
+  },
+  {
+    id: 7,
+    name: "Максим",
+    age: 19,
+    city: "Чернігів",
+    email: "maks@example.com",
+    isActive: false,
+    salary: 18000,
+  },
+  {
+    id: 8,
+    name: "Наталія",
+    age: 72,
+    city: "Полтава",
+    email: "nataliya@example.com",
+    isActive: true,
+    salary: 25000,
+  },
+];
+
 function App() {
+  const sortedSalary = [...users].sort((a, b) => {
+    return a.salary - b.salary;
+  });
   return (
     <>
-      {/* <ul>
-        {usersInfo.map(
-          ({
-            id,
-            name,
-            age,
-            email,
-            city,
-            isActive,
-            balance,
-            role,
-            skills,
-            friends,
-            address: { country, street, zip },
-          }) => {
-            return <li key={id}>
-            <h1>{name}</h1>
-            <p>{age}</p>
-            <p>{email}</p>
-            <p>{city}</p>
-            <p>{isActive}</p>
-            <p>{balance}</p>
-            <p>{role}</p>
-            <p>{skills.join(",")}</p>
-             <p>{friends.join(",")}</p>
-             <p>{country}</p>
-             <p>{street}</p>
-             <p>{zip}</p>
-            </li>
-          },
-        )}
-      </ul> */}
       <Section>
-        <Title text="Про студентів" />
-        <List data={students} />
-      </Section>
-
-      <Section>
-        <Title text="Про авто" />
-       <List data={auto}/>
+        <Title text="заголовок"/>
+        <List data={sortedSalary}/>
       </Section>
     </>
   );
