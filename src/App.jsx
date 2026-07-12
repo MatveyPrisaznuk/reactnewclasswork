@@ -6,8 +6,8 @@ import "./App.css";
 // import Title from "./components/Title/Title";
 // import Section from "./components/Section/Section";
 // import List from "./components/List/List";
-import footbal from "./football.json"
-import FootbalList from "./components/FootbalList/FootbalList";
+// import footbal from "./football.json"
+// import FootbalList from "./components/FootbalList/FootbalList";
 // const usersInfo = [
 //   {
 //     id: 1,
@@ -267,7 +267,7 @@ function App() {
         <List data={sortedSalary}/>
       </Section> */}
 
-      <FootbalList footbal={footbal}/>
+      {/* <FootbalList footbal={footbal}/> */}
     </>
   );
 }
