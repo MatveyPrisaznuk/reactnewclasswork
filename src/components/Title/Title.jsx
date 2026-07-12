@@ -1,5 +1,9 @@
-function Title ({text}) {
-    return <h1>{text}</h1>
-}
+// import "./Title.css"
+// import style from "./Title.module.css"
+// console.log(style);
 
-export default Title
+// function Title ({text}) {
+//     return <h1 className={style.heading}>{text}</h1>
+// }
+
+// export default Title

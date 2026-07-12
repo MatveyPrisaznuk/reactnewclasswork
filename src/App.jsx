@@ -3,10 +3,11 @@
 // import viteLogo from './assets/vite.svg'
 // import heroImg from './assets/hero.png'
 import "./App.css";
-import Title from "./components/Title/Title";
-import Section from "./components/Section/Section";
-import List from "./components/List/List";
-
+// import Title from "./components/Title/Title";
+// import Section from "./components/Section/Section";
+// import List from "./components/List/List";
+import footbal from "./football.json"
+import FootbalList from "./components/FootbalList/FootbalList";
 // const usersInfo = [
 //   {
 //     id: 1,
@@ -180,91 +181,93 @@ import List from "./components/List/List";
 //   },
 // ];
 
-const users = [
-  {
-    id: 1,
-    name: "Іван",
-    age: 16,
-    city: "Київ",
-    email: "ivan@example.com",
-    isActive: true,
-    salary: 12000,
-  },
-  {
-    id: 2,
-    name: "Олена",
-    age: 22,
-    city: "Львів",
-    email: "olena@example.com",
-    isActive: false,
-    salary: 28000,
-  },
-  {
-    id: 3,
-    name: "Андрій",
-    age: 35,
-    city: "Одеса",
-    email: "andrii@example.com",
-    isActive: true,
-    salary: 55000,
-  },
-  {
-    id: 4,
-    name: "Марія",
-    age: 48,
-    city: "Харків",
-    email: "maria@example.com",
-    isActive: true,
-    salary: 73000,
-  },
-  {
-    id: 5,
-    name: "Олександр",
-    age: 61,
-    city: "Дніпро",
-    email: "olex@example.com",
-    isActive: false,
-    salary: 41000,
-  },
-  {
-    id: 6,
-    name: "Катерина",
-    age: 27,
-    city: "Вінниця",
-    email: "katya@example.com",
-    isActive: true,
-    salary: 36000,
-  },
-  {
-    id: 7,
-    name: "Максим",
-    age: 19,
-    city: "Чернігів",
-    email: "maks@example.com",
-    isActive: false,
-    salary: 18000,
-  },
-  {
-    id: 8,
-    name: "Наталія",
-    age: 72,
-    city: "Полтава",
-    email: "nataliya@example.com",
-    isActive: true,
-    salary: 25000,
-  },
-];
+// const users = [
+//   {
+//     id: 1,
+//     name: "Іван",
+//     age: 16,
+//     city: "Київ",
+//     email: "ivan@example.com",
+//     isActive: true,
+//     salary: 12000,
+//   },
+//   {
+//     id: 2,
+//     name: "Олена",
+//     age: 22,
+//     city: "Львів",
+//     email: "olena@example.com",
+//     isActive: false,
+//     salary: 28000,
+//   },
+//   {
+//     id: 3,
+//     name: "Андрій",
+//     age: 35,
+//     city: "Одеса",
+//     email: "andrii@example.com",
+//     isActive: true,
+//     salary: 55000,
+//   },
+//   {
+//     id: 4,
+//     name: "Марія",
+//     age: 48,
+//     city: "Харків",
+//     email: "maria@example.com",
+//     isActive: true,
+//     salary: 73000,
+//   },
+//   {
+//     id: 5,
+//     name: "Олександр",
+//     age: 61,
+//     city: "Дніпро",
+//     email: "olex@example.com",
+//     isActive: false,
+//     salary: 41000,
+//   },
+//   {
+//     id: 6,
+//     name: "Катерина",
+//     age: 27,
+//     city: "Вінниця",
+//     email: "katya@example.com",
+//     isActive: true,
+//     salary: 36000,
+//   },
+//   {
+//     id: 7,
+//     name: "Максим",
+//     age: 19,
+//     city: "Чернігів",
+//     email: "maks@example.com",
+//     isActive: false,
+//     salary: 18000,
+//   },
+//   {
+//     id: 8,
+//     name: "Наталія",
+//     age: 72,
+//     city: "Полтава",
+//     email: "nataliya@example.com",
+//     isActive: true,
+//     salary: 25000,
+//   },
+// ];
 
 function App() {
-  const sortedSalary = [...users].sort((a, b) => {
-    return a.salary - b.salary;
-  });
+  // const sortedSalary = [...users].sort((a, b) => {
+  //   return a.salary - b.salary;
+  // });
   return (
     <>
-      <Section>
+      {/* <Section>
         <Title text="заголовок"/>
         <List data={sortedSalary}/>
-      </Section>
+      </Section> */}
+
+      <FootbalList footbal={footbal}/>
     </>
   );
 }
