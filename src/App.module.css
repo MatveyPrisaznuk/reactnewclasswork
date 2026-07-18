@@ -1,0 +1,36 @@
+.list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    gap: 20px;
+}
+
+.item {
+    padding: 10px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.text {
+    font-size: 15px;
+}
+
+.isactive {
+    color: green;
+}
+
+.isoffline {
+    color: red;
+}
+
+.badrate {
+    text-decoration: line-through;
+}
+
+.goodrate {
+    font-size: 25px;
+}
