@@ -13,3 +13,18 @@
 // }
 
 // export default List
+import { Data } from "./List.styled"
+
+function List({data}) {
+    return <Data>{data.map(({id, name, age, isOnline, role, points}) => {
+        return <Item key={id}>
+        <Title>{name}</Title>
+        <p>{age}</p>
+        <p>{isOnline ? "Active" : "Not Active"}</p>
+        <p>{role}</p>
+        <p>{points}</p>
+        </Item>
+    })}</Data>
+}
+
+export default List

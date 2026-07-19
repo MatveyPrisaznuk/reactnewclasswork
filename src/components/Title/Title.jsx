@@ -7,3 +7,10 @@
 // }
 
 // export default Title
+import { Heading } from "./Title.styled"
+
+function Title() {
+    return  <Heading>Hello World!</Heading>
+}
+
+export default Title

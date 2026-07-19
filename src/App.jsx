@@ -11,6 +11,10 @@ import "./App.css";
 import items from "./items.json";
 import style from "./App.module.css"
 import clsx from 'clsx';
+import Title from "./components/Title/Title";
+import { Heading } from "./components/Title/Title.styled";
+import List from "./components/List/List";
+import data from "./data.json"
 
 function App() {
   // const sortedSalary = [...users].sort((a, b) => {
@@ -25,7 +29,7 @@ function App() {
 
       {/* <FootbalList footbal={footbal}/> */}
 
-      <ul className={style.list}>
+      {/* <ul className={style.list}>
         {items.map(({ id, name, category, price, rating, inStock, status }) => {
           return (
             <li key={id} className={style.item}>
@@ -38,7 +42,9 @@ function App() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
+      <Title/>
+      <List data={data}/>
     </>
   );
 }
